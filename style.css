@@ -7,9 +7,144 @@
 }
 
 :root {
-  --bg-color: rgb(223, 223, 223);
+  --bg-color: #d7d7d7;
+  --bg-color2: rgb(0, 102, 0);
+  --secondary-color: white;
 }
 
 body {
   background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.block {
+  width: 1rem;
+  height: 2.5rem;
+  background-color: var(--bg-color2);
+}
+
+.shop-items {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  gap: 4rem;
+
+  padding: 1rem;
+  background-color: var(--secondary-color);
+}
+.detail div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: Josefin Sans;
+  margin-left: -3.8rem;
+  color: var(--bg-color2);
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0%;
+  padding: 0%;
+  text-align: left;
+  font-family: Roboto;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.shop-head-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 3rem; */
+}
+
+.sort-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: -2rem;
+}
+
+select {
+  border: none;
+  width: 9rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: Roboto;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+}
+
+select:focus {
+  outline: none;
+}
+
+option {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: Roboto;
+
+  background-color: var(--secondary-color);
+}
+
+.shop-cards {
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  width: 15rem;
+  height: 20rem;
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  gap: 2rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 1px 2px 1px 2px rgba(141, 141, 141, 0.519);
+}
+
+.card img {
+  width: 100%;
+  height: 70%;
+  object-position: center;
+  margin-top: -2rem;
+  border-radius: 1rem;
+}
+
+.scroll {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  overflow: scroll;
+  max-width: 770px;
+  padding: 1rem;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.detail-tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
 }
