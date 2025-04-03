@@ -80,7 +80,7 @@ body {
 }
 
 select {
-  border: none;
+  border: 1px solid orangered;
   width: 9rem;
   font-size: 1rem;
   font-weight: 600;
@@ -102,7 +102,7 @@ option {
 }
 
 .shop-cards {
-  gap: 1rem;
+  gap: 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -110,7 +110,7 @@ option {
 .card {
   width: 15rem;
   height: 20rem;
-  background-color: var(--bg-color);
+  background-color: rgb(248, 248, 248);
   padding: 1rem;
   gap: 2rem;
   border-radius: 0.5rem;
@@ -119,22 +119,30 @@ option {
   display: flex;
   align-items: center;
   flex-direction: column;
-  box-shadow: 1px 2px 1px 2px rgba(141, 141, 141, 0.519);
+  border: 1px solid orangered;
+  /* box-shadow: 1px 2px 1px 2px rgba(141, 141, 141, 0.519); */
+}
+
+.card:hover {
+  scale: 1.05;
+  box-shadow: 1px 2px 1px 2px rgba(93, 92, 92, 0.395);
+  transition: 0.5s;
+  border: none;
 }
 
 .card img {
   width: 100%;
   height: 100%;
-
+  object-position: center;
   object-fit: cover;
 }
 
 .scroll {
   display: flex;
   flex-direction: row;
-  gap: 5rem;
+  gap: 6rem;
   overflow: scroll;
-  max-width: 770px;
+  max-width: 820px;
   padding: 1rem;
   scroll-behavior: smooth;
   scrollbar-width: none;
@@ -146,9 +154,63 @@ option {
   justify-content: space-between;
   align-items: center;
   gap: 4rem;
+  font-family: Roboto;
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
 }
-/* .card .img-container {
+.card .img-container {
   overflow: hidden;
   border-radius: 1rem;
-  width: 100%;
-} */
+  aspect-ratio: 20/20;
+}
+
+.detail-tag h2 {
+  font-size: 1rem;
+}
+
+#top {
+  object-position: bottom;
+}
+
+.card select {
+  width: fit-content;
+  border-radius: 1rem;
+}
+
+.add-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+button {
+  width: 2rem;
+  height: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: white;
+  border: 1px solid orangered;
+  font-family: Roboto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: inherit;
+  text-align: center;
+}
+
+button:hover {
+  transition: 0.5s;
+  color: white;
+  background-color: orangered;
+}
